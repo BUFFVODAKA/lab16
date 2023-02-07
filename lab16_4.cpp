@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <algorithm>
 using namespace std;
 
 void shuffle(int &,int &,int &,int &);
@@ -17,3 +18,17 @@ int main(){
 	
 	return 0;
 }
+
+void shuffle(int &a,int &b,int &c,int &d){
+	int x = rand()%2;
+	if(x==0){
+		int z = a;
+		a=b;b=c;c=d;d=z;
+	}if(x==1){
+		int z = b;
+		int y = c;
+		b=d;c=a;a=y;d=z;
+	}
+	
+}
+	
